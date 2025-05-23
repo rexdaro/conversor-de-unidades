@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(26, 27, 44);
+    color: aliceblue;
+    font-family: roboto;
+    display: flex;
+    flex-direction: column;
+}
+
+.botonera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 18px;
+  background-color: #1a2941; /* Azul violeta moderno */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+ 
+  
+}
+
+
+
+/* Estilo general opcional para los contenedores */
+

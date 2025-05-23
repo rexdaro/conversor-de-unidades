@@ -60,13 +60,13 @@ const buttonng = document.getElementById('button-ng') as HTMLButtonElement | nul
 
 // funcion seleccionadora de boton:
 const seleccionarBotonDe = (button: HTMLButtonElement, medida: string): void => { 
-  if (button.style.backgroundColor === 'red') {
-    button.style.backgroundColor = 'initial';
+  if (button.style.backgroundColor === 'rgb(197, 79, 0)') {
+    button.style.backgroundColor = '#1a2941';
     convertirDe = '';
     h3ConversionDe.textContent = ``;
   }
   else {
-    button.style.backgroundColor = 'red';
+    button.style.backgroundColor = 'rgb(197, 79, 0)';
     convertirDe = medida;
     h3ConversionDe.textContent = `De: ${convertirDe}`;
   }  
@@ -74,8 +74,8 @@ const seleccionarBotonDe = (button: HTMLButtonElement, medida: string): void => 
 }
 
 const seleccionarBotonA = (button: HTMLButtonElement, medida: string): void => { 
-  if (button.style.backgroundColor === 'blue') {
-    button.style.backgroundColor = 'initial';
+  if (button.style.backgroundColor === 'rgb(6, 90, 158)') {
+    button.style.backgroundColor = '#1a2941';
     convertirA = '';
     h3ConversionA.textContent = ``;
   }
@@ -83,7 +83,7 @@ const seleccionarBotonA = (button: HTMLButtonElement, medida: string): void => {
     alert ('primero debe deseleccionar')
   }
   else {
-    button.style.backgroundColor = 'blue';
+    button.style.backgroundColor = 'rgb(6, 90, 158)';
     convertirA = medida;
     h3ConversionA.textContent = `A: ${convertirA}`;
   }  
