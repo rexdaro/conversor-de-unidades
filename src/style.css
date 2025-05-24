@@ -102,3 +102,12 @@ input:focus {
 }
 /* Estilo general opcional para los contenedores */
 
+footer{
+    text-align: center;    
+    margin: 0;
+    margin-bottom: 0.8rem;
+    font-size: 0.75rem;    
+    color: #ffffff;    
+    width: 100%;
+    margin: 0;
+}
