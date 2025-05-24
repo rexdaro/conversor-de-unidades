@@ -12,76 +12,83 @@
   <body>
     <h1>Conversor de unidades</h1>
 
-    <div>
-      <h3>Grados</h3>
-      <div class="botonera">
-        <button id="buttonC">C°</button>
-        <button id="buttonF">F°</button>
-      </div>
+
+    <div class="contenedor-input-reset">
+      <input type="text" id="input">
+      <button class="buton-reset" id="recargarBtn">reset</button>    
+      <div class="resultado"></div>
     </div>
 
-    <div>
-      <h3>Área</h3>
-      <div class="botonera">
-        <button id="button-km2">Km²</button>
-        <button id="button-hm2">hm²</button>
-        <button id="button-dam2">dam²</button>
-        <button id="button-m2">m²</button>
+    <div class="div-contenedor-principal">
+
+      <div class="div-unidades">
+        <h3 class="h3-grados">Grados</h3>
+        <div class="botonera" id="botonera-grados">
+          <button id="buttonC">C°</button>
+          <button id="buttonF">F°</button>
+        </div>
       </div>
+
+      <div class="div-unidades">
+        <h3 class="h3-area">Área</h3>
+        <div class="botonera" id="botonera-area">
+          <button id="button-km2">Km²</button>
+          <button id="button-hm2">hm²</button>
+          <button id="button-dam2">dam²</button>
+          <button id="button-m2">m²</button>
+        </div>
+      </div>
+
+      <div class="div-unidades">
+        <h3 class="h3-volumen">Volumen</h3>
+        <div class="botonera"  id="botonera-volumen">
+          <button id="button-km3">km³</button>
+          <button id="button-hm3">hm³</button>
+          <button id="button-dam3">dam³</button>
+          <button id="button-m3">m³</button>
+          <button id="button-dm3">dm³</button>
+          <button id="button-cm3">cm³</button>
+          <button id="button-mm3">mm³</button>
+        </div>
+      </div>
+
+      <div class="div-unidades">
+        <h3 class="h3-distancia">Distancia</h3>
+        <div class="botonera"  id="botonera-distancia">
+          <button id="button-km">km</button>
+          <button id="button-hm">hm</button>
+          <button id="button-dam">dam</button>
+          <button id="button-m">m</button>
+          <button id="button-dm">dm</button>
+          <button id="button-cm">cm</button>
+          <button id="button-mm">mm</button>
+          <button id="button-um">µm</button>
+          <button id="button-nm">nm</button>
+        </div>
+      </div>
+
+      <div class="div-unidades">
+        <h3 class="h3-masa">Masa</h3>
+        <div class="botonera"  id="botonera-masa">
+          <button id="button-kg">kg</button>
+          <button id="button-hg">hg</button>
+          <button id="button-dag">dag</button>
+          <button id="button-g">g</button>
+          <button id="button-dg">dg</button>
+          <button id="button-cg">cg</button>
+          <button id="button-mg">mg</button>
+          <button id="button-ug">µg</button>
+          <button id="button-ng">ng</button>
+        </div>
+      </div>
+
     </div>
 
-    <div>
-      <h3>Volumen</h3>
-      <div class="botonera">
-        <button id="button-km3">km³</button>
-        <button id="button-hm3">hm³</button>
-        <button id="button-dam3">dam³</button>
-        <button id="button-m3">m³</button>
-        <button id="button-dm3">dm³</button>
-        <button id="button-cm3">cm³</button>
-        <button id="button-mm3">mm³</button>
-      </div>
-    </div>
+    
 
-    <div>
-      <h3>Distancia</h3>
-      <div class="botonera">
-        <button id="button-km">km</button>
-        <button id="button-hm">hm</button>
-        <button id="button-dam">dam</button>
-        <button id="button-m">m</button>
-        <button id="button-dm">dm</button>
-        <button id="button-cm">cm</button>
-        <button id="button-mm">mm</button>
-        <button id="button-um">µm</button>
-        <button id="button-nm">nm</button>
-      </div>
-    </div>
-
-    <div>
-      <h3>Masa</h3>
-      <div class="botonera">
-        <button id="button-kg">kg</button>
-        <button id="button-hg">hg</button>
-        <button id="button-dag">dag</button>
-        <button id="button-g">g</button>
-        <button id="button-dg">dg</button>
-        <button id="button-cg">cg</button>
-        <button id="button-mg">mg</button>
-        <button id="button-ug">µg</button>
-        <button id="button-ng">ng</button>
-      </div>
-    </div>
-
-
-
-    <input type="text" id="input">
     
     
-    <div class="resultado">
-
-      
-    </div>
+    
 
     <script type="module" src="/src/main.ts"></script>
   </body>

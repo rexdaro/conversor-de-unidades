@@ -11,6 +11,7 @@ body{
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 button {
@@ -21,11 +22,83 @@ button {
   border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
- 
-  
+  font-weight: 500;
+  margin: 0.2rem;
+}
+
+h1{
+    text-align: center;
 }
 
 
+.buton-reset{
+    background-color: rgb(163, 0, 0);
+    font-weight: 600;
+    width: 84%;
+}
 
+#botonera-grados, #botonera-area, #botonera-volumen, #botonera-distancia, #botonera-masa{
+    display: none;    
+}
+
+.div-unidades{
+    background-color: rgb(37, 47, 71);
+    margin: 1rem 0 0 0;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.div-unidades h3{
+    text-align: center;
+}
+
+input {
+    max-width: 400px;
+    padding: 1rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    display: block;
+    width: calc(80% - 1rem);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+input:focus {
+  border-color: #4f46e5; /* Azul moderno */
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2); /* Glow */
+}
+
+.div-contenedor-principal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contenedor-input-reset{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.resultado{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff9f;
+    border-radius: 0.5rem;
+    width: 84%;
+}
 /* Estilo general opcional para los contenedores */
 

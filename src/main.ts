@@ -139,10 +139,11 @@ if(buttonkm2 && buttonhm2 && buttondam2 && buttonm2){
   })  
   buttonm2.addEventListener('click', () => {
   
-    if(convertirDe === '' || convertirDe === 'm2'){
-      seleccionarBotonDe(buttonm2, 'dam2');
-    }
-    else seleccionarBotonA(buttonm2, 'm2');    
+    if (convertirDe === '' || convertirDe === 'm2') {
+      seleccionarBotonDe(buttonm2, 'm2'); // ← CORRECTO
+    } else {
+      seleccionarBotonA(buttonm2, 'm2');
+    }    
   })
 }
 
@@ -466,16 +467,17 @@ const transformar = () => {
 
 
   //para grados
-  switch (convertirDe) {
-    case 'C':    
-      resultado = celciusAFarenheit(valor);
-        h1Resultado.textContent = `${valor}°C = ${resultado.toFixed(2)}°F`;
-      break;
-    case 'F':
-      resultado = farenheitACelcius(valor);
-        h1Resultado.textContent = `${valor}°F = ${resultado.toFixed(2)}°C`;
-      break;   
-  }  
+  if ((convertirDe === 'C' && convertirA === 'F')) {
+    resultado = celciusAFarenheit(valor);
+    h1Resultado.textContent = `${valor}°C = ${resultado.toFixed(2)}°F`;
+    return;
+  }
+
+  if ((convertirDe === 'F' && convertirA === 'C')) {
+    resultado = farenheitACelcius(valor);
+    h1Resultado.textContent = `${valor}°F = ${resultado.toFixed(2)}°C`;
+    return;
+  }
   // para area: 
 
   const unidadesArea = ['km2', 'hm2', 'dam2', 'm2'];
@@ -483,6 +485,7 @@ const transformar = () => {
     const metrosCuadrados = aMetrosCuadrados(valor, convertirDe);
     const resultadoArea = desdeMetrosCuadrados(metrosCuadrados, convertirA);
     h1Resultado.textContent = `${valor} ${convertirDe} = ${resultadoArea.toFixed(2)} ${convertirA}`;
+    return
   }
 
 
@@ -534,3 +537,50 @@ if (input) {
     console.log('esta transformando')
   });
 }
+
+
+//button reset
+const botonRecargar = document.getElementById('recargarBtn');
+
+botonRecargar?.addEventListener('click', () => {
+  location.reload(); // Esto recarga la página
+});
+
+
+
+//mostrar o ocultar botones
+
+// Obtener todas las botoneras
+const btnGrados = document.getElementById('botonera-grados') as HTMLElement;
+const btnArea = document.getElementById('botonera-area') as HTMLElement;
+const btnVolumen = document.getElementById('botonera-volumen') as HTMLElement;
+const btnDistancia = document.getElementById('botonera-distancia') as HTMLElement;
+const btnMasa = document.getElementById('botonera-masa') as HTMLElement;
+
+// Obtener todos los títulos
+const h3Grados = document.querySelector('.h3-grados') as HTMLElement;
+const h3Area = document.querySelector('.h3-area') as HTMLElement;
+const h3Volumen = document.querySelector('.h3-volumen') as HTMLElement;
+const h3Distancia = document.querySelector('.h3-distancia') as HTMLElement;
+const h3Masa = document.querySelector('.h3-masa') as HTMLElement;
+
+// Agrupar en arrays para iterar
+const secciones: { h3: HTMLElement, botonera: HTMLElement }[] = [
+  { h3: h3Grados, botonera: btnGrados },
+  { h3: h3Area, botonera: btnArea },
+  { h3: h3Volumen, botonera: btnVolumen },
+  { h3: h3Distancia, botonera: btnDistancia },
+  { h3: h3Masa, botonera: btnMasa },
+];
+
+// Función para ocultar todas las botoneras excepto la seleccionada
+function mostrarSolo(visible: HTMLElement) {
+  secciones.forEach(({ botonera }) => {
+    botonera.style.display = (botonera === visible) ? 'flex' : 'none';
+  });
+}
+
+// Asignar evento a cada h3
+secciones.forEach(({ h3, botonera }) => {
+  h3.addEventListener('click', () => mostrarSolo(botonera));
+});
